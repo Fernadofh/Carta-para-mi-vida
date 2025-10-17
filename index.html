@@ -224,7 +224,11 @@
     document.body.appendChild(corazon);
     setTimeout(() => corazon.remove(), 7000);
   }
-  setInterval(crearCorazon, 500);
+  
+// Crear algunos corazones al inicio (no infinitos)
+for (let i = 0; i < 20; i++) {
+  setTimeout(crearCorazon, i * 400);
+  
 
   // Texto de la carta en párrafos
   const parrafos = [
