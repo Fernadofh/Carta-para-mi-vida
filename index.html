@@ -212,115 +212,47 @@
 
 
 
+ <script>
+  // Corazones flotando
+  function crearCorazon() {
+    const corazon = document.createElement("div");
+    corazon.classList.add("corazon");
+    corazon.innerHTML = "💗";
+    corazon.style.left = Math.random() * 100 + "vw";
+    corazon.style.fontSize = (Math.random() * 20 + 15) + "px";
+    corazon.style.animationDuration = (Math.random() * 5 + 5) + "s";
+    document.body.appendChild(corazon);
+    setTimeout(() => corazon.remove(), 7000);
+  }
+  setInterval(crearCorazon, 500);
+
+  // Texto de la carta en párrafos
+  const parrafos = [
+    "Solo escribia está cartita para recordarte lo mucho que te quiero mi niña, lo digo a cada rato pero me siento bien al decírtelo y mucho más cuando tú me lo dices y me tratas de mi vida y así ajsj se me alegra la vida de solo tenerte porque a pesar que estamos tan lejos hemos llegado a estar tan cerca sentímentalmente que me haces amarte de esa forma tan sinsera.",
+    "Que no importa si hablamos mucho o poco porque se que estás ahí cuando te nesecito aunque soy intenso y me gustaría hablar contigo 24/7.",
+    "Te amo con cada parte de mi ser y le pido a Dios por ti siempre porque se que eres una loca casi sin remedio pero alguno remedio se encontrará.",
+    "Te amo mucho mi niña hermosa sabes que lo digo de corazon y te lo juro ante Dios cuanto te amo te quiero cuídate más bebita siempre sabes que estoy para ti siempre.",
+    "Y que sueño con verte con poder abrazarte que me gustaría salir corriendo hasta llegar donde ti peor capas me muera en el camino ajaja.",
+    "No se porque escribo solo quería decirte muchas cosas bonitas que ahora no organizo las ideas solo se que te lo digo de corazón que te amo y que te cuides porque que sería de mí sin ti sin esos ojitos  que tienes tan bellos que me hacen sentir alegre cuando los veo aunque ahora casi no hablamos mucho, que te extraño casi siempre que no hablamos aunque solo hayan pasado horas desde el último mensaje y no encuentre que cosa mandarte para hablar un minuto más contigo.",
+    "si soy intenso pero eso significa cuanto me importas quizá no sea la forma en que te guste que me exprese pero es la forma en la que más siento que te demuestro todo lo bonito que no me ajustan las palabras para decirte y las resumo en un te amo que apenas las contiene.",
+    "Gracias por estar en mi vida por aguantarme y por todo los bonitos momentos que me das y que siento que a veces no te ayudo mucho pero sabes que un consejo por lo menos te puedo dar darte ánimos un chiste más contado jaja y algún día si Dios nos permite vida y nos cuidamos poder abrazarte y decirte que ese era mi momento más soñado y que eres mi propósito para cada día seguir adelante💗",
+    "I love you my darling❤️"
+  ];
+
+  const carta = document.getElementById("carta");
+
+  // Mostrar todos los párrafos al cargar
+  window.onload = () => {
+    parrafos.forEach(texto => {
+      const p = document.createElement("p");
+      p.classList.add("parrafo");
+      p.textContent = texto;
+      carta.appendChild(p);
+    });
+  };
+ </script>
   <!-- Corazones animados -->
 
-  <script>
-
-    // Corazones flotando
-
-    function crearCorazon() {
-
-      const corazon = document.createElement("div");
-
-      corazon.classList.add("corazon");
-
-      corazon.innerHTML = "💗";
-
-      corazon.style.left = Math.random() * 100 + "vw";
-
-      corazon.style.fontSize = (Math.random() * 20 + 15) + "px";
-
-      corazon.style.animationDuration = (Math.random() * 5 + 5) + "s";
-
-      document.body.appendChild(corazon);
-
-      setTimeout(() => corazon.remove(), 7000);
-
-    }
-
-    setInterval(crearCorazon, 500);
-
-
-
-    // Texto de la carta en párrafos
-
-const parrafos = [
-
-  "Para Amy.",
-
-  "Solo escribía está cartita para recordarte lo mucho que te quiero mi niña, lo digo a cada rato pero me siento bien al decírtelo y mucho más cuando tú me lo dices y me tratas de mi vida y así ajsj se me alegra la vida de solo tenerte porque a pesar que estamos tan lejos hemos llegado a estar tan cerca sentímentalmente que me haces amarte de esa forma tan sinsera.",
-
-  "Que no importa si hablamos mucho o poco porque se que estás ahí cuando te nesecito aunque soy intenso y me gustaría hablar contigo 24/7.",
-
-  "Te amo con cada parte de mi ser y le pido a Dios por ti siempre porque se que eres una loca casi sin remedio pero alguno remedio se encontrará.",
-
-  "Te amo mucho mi niña hermosa sabes que lo digo de corazon y te lo juro ante Dios cuanto te amo te quiero cuídate más bebita siempre sabes que estoy para ti siempre.",
-
-  "Y que sueño con verte con poder abrazarte que me gustaría salir corriendo hasta llegar donde ti peor capas me muera en el camino ajaja.",
-
-  "No se porque escribo solo quería decirte muchas cosas bonitas que ahora no organizo las ideas solo se que te lo digo de corazón que te amo y que te cuides porque que sería de mí sin ti sin esos ojitos  que tienes tan bellos que me hacen sentir alegre cuando los veo aunque ahora casi no hablamos mucho, que te extraño casi siempre que no hablamos aunque solo hayan pasado horas desde el último mensaje y no encuentre que cosa mandarte para hablar un minuto más contigo.",
-
-  "si soy intenso pero eso significa cuanto me importas quizá no sea la forma en que te guste que me exprese pero es la forma en la que más siento que te demuestro todo lo bonito que no me ajustan las palabras para decirte y las resumo en un te amo que apenas las contiene.",
-
-  "Gracias por estar en mi vida por aguantarme y por todo los bonitos momentos que me das y que siento que a veces no te ayudo mucho pero sabes que un consejo por lo menos te puedo dar darte ánimos un chiste más contado jaja y algún día si Dios nos permite vida y nos cuidamos poder abrazarte y decirte que ese era mi momento más soñado y que eres mi propósito para cada día seguir adelante💗",
-
-  "I love you my darling❤️"
-
-];
-    
-
-
-    const carta = document.getElementById("carta");
-
-
-
-    function escribirParrafo(index) {
-
-   
-
-
-
-      const p = document.createElement("p");
-
-      p.classList.add("parrafo");
-
-      carta.appendChild(p);
-
-
-
-      let i = 0;
-
-      const texto = parrafos[index];
-
-      const interval = setInterval(() => {
-
-        p.textContent += texto.charAt(i);
-
-        i++;
-
-        if(i >= texto.length){
-
-          clearInterval(interval);
-
-          p.style.opacity = 1;
-
-          setTimeout(() => escribirParrafo(index + 1), 800); // tiempo entre párrafos
-
-        }
-
-      }, 20); // velocidad máquina de escribir
-
-    }
-
-
-
-    // Inicia la escritura al cargar
-
-    window.onload = () => escribirParrafo(0);
-
-
-
-  </script>
 
 </body>
 
