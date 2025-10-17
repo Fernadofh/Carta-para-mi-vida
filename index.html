@@ -16,31 +16,22 @@
 
     /* Fondo animado romántico */
 
-    body {
 
-      margin: 0;
-
-      padding: 0;
-
-      min-height: 100vh;
-
-      display: flex;
-
-      justify-content: center;
-
-      align-items: center;
-
-      font-family: 'Open Sans';
-
-      background: linear-gradient(-45deg, #ffafbd, #ffc3a0, #ffdde1, #ee9ca7);
-
-      background-size: 400% 400%;
-
-      animation: gradientBG 12s ease infinite;
-
-      overflow: hidden;
-
-    }
+      body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans';
+  background: linear-gradient(-45deg, #ffafbd, #ffc3a0, #ffdde1, #ee9ca7);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  overflow-y: auto;   /* ✅ Permite deslizar hacia abajo */
+  overflow-x: hidden; /* ❌ No deja mover a los lados */
+      }
+      
 
 
 
